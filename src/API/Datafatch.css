@@ -1,0 +1,50 @@
+
+.item{
+    position: relative;
+    overflow-y: scroll;
+    background: #c1c1c1;
+    margin-left:40px ;
+    border-radius: 8px;
+    padding: 0 20px;
+    width: 350px;
+    height: 400px;
+    margin-top: 0;
+}
+.Searchvaldiv{
+    background-color:#c1c1c1 ;
+    position:sticky;
+    top: 0;
+}
+.Searchval{
+    text-align: center;
+    margin: 15px 0 0 0 ;
+  
+}
+.li{
+    margin-top: 5px;
+    cursor: pointer;
+    background: rgb(225, 243, 145);
+}
+.info{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50px;
+    border-radius: 5px;
+    text-align: center;
+    background: #c1c1c1;
+    box-shadow: 0 0 5px #c1c1c1,
+                0 0 25px #c1c1c1,
+                0 0 50px #c1c1c1,
+                0 0 100px #c1c1c1
+
+}
+.h3{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+.p{
+    font-size: 20px;
+    margin-top: 0;
+}

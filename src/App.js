@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useState } from "react";
+import Datafatch from "./API/Datafatch";
 import './App.css';
 
 function App() {
+
+  const [inpVal,setinpVal] = useState('bookName')
+  const [info,setinfo] = useState('')
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <form onSubmit={(evt)=>{
+        evt.preventDefault()
+        setinpVal(evt.target[0].value)
+        evt.target[0].value = ""
+      }} >
+
+        <input type="text" className="input"/>  
+        <button className="searchBtn">Search</button>
+      
+      </form>
+      <div className="flex">
+        <Datafatch inpVal={inpVal} setinfo={setinfo} />
+        {info}
+      </div>
+      
     </div>
   );
 }
